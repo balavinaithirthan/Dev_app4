@@ -1,0 +1,152 @@
+* {
+  margin: auto;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+.banner {
+  margin: auto;
+  width: 100%;
+  background-image: url(../images/door.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.content {
+  width: 100%;
+  text-align: center;
+}
+
+.content h1 {
+  margin: 10px 30px 15px 30px;
+  font-size: 70px;
+  margin-top: 80px;
+}
+
+.content p {
+  margin: 10px 50px 15px 50px;
+  font-weight: 100;
+  line-height: 25px;
+}
+
+/*.wrapper {
+  transform: translateY(100%);
+  border: 0;
+  padding: 15px 10px;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}*/
+
+.wrapper {
+  text-align: center;
+}
+
+.fieldset {
+  width: 80%;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+input,
+textarea {
+  height: 10%;
+  padding: 5px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 0px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.row {
+  width: auto;
+  display: flex;
+  align-items: center;
+  content: "";
+  display: table;
+  clear: both;
+}
+
+label {
+  width: auto;
+  display: inline-block;
+  padding: 12px 12px 12px 0;
+}
+
+@media screen and (max-width: 600px) {
+  .col-25,
+  .col-75,
+  fieldset,
+  input,
+  textArea {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+ReCAPTCHA {
+  text-align: center;
+  display: inline-block;
+}
+
+button {
+  width: 200px;
+  border: 0;
+  padding: 15px 10px;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 2px solid #009688;
+  background: transparent;
+  color: #000;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+span {
+  background: #009688;
+  height: 100%;
+  width: 0;
+  border-radius: 25px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+button:hover span {
+  width: 100%;
+}
+
+button:hover {
+  border: none;
+}
+
+form {
+  margin-bottom: 40px;
+}
