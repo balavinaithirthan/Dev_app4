@@ -75,14 +75,16 @@ function App() {
       <div className="banner">
         <div className="home"></div>
         <div className="content">
-          <h1>Sentil's Personal Driver and Chauffeur Service </h1>
+          <h1>Sentil's Driving and Chauffeur Service </h1>
           <p>
             I provide premium driving services in Chennai and entire Tamil Nadu.
             I guarantee to be highly presentable, professional, and courteous at
             all times. I will drive you to your destinations in style while
             exhibiting the utmost respect and diligence.
           </p>
-          <a href="tel:123-456-7890">CLICK TO CALL</a>
+          <div className="number">
+            <a href="tel:123-456-7890">CLICK TO CALL</a>
+          </div>
         </div>
         <div className="wrapper">
           {/* {submitting && (
@@ -99,7 +101,7 @@ function App() {
       )} */}
           <form onSubmit={handleSubmit}>
             <div className="fieldset">
-              <h1>Requests and Questions Form</h1>
+              <h1>Requests and Questions</h1>
               <div className="row">
                 <div className="col-25">
                   <label>
@@ -145,7 +147,7 @@ function App() {
               <div className="row">
                 <div className="col-25">
                   <label>
-                    <p>Trip details/Questions</p>
+                    <p>Trip Details</p>
                   </label>
                 </div>
                 <div className="col-75">
