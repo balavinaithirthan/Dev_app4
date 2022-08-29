@@ -37,7 +37,7 @@ function App() {
   const [readText, setreadText] = useState(false);
 
   function onChange(value) {
-    console.log("Captcha value:", value);
+    // console.log("Captcha value:", value);
     setSubmitting(true);
   }
 
@@ -64,6 +64,7 @@ function App() {
   };
 
   const handleChange = (event) => {
+    setSubmitting(true);
     setFormData({
       name: event.target.name,
       value: event.target.value,
@@ -75,13 +76,10 @@ function App() {
       <div className="banner">
         <div className="home"></div>
         <div className="content">
-          <h1>Sentil's Driving and Chauffeur Service </h1>
-          <p>
+          <h1>Senthil's Taxi Service </h1>
+          {/* <h3>
             I provide premium driving services in Chennai and entire Tamil Nadu.
-            I guarantee to be highly presentable, professional, and courteous at
-            all times. I will drive you to your destinations in style while
-            exhibiting the utmost respect and diligence.
-          </p>
+          </h3> */}
           <div className="number">
             <a href="tel:123-456-7890">CLICK TO CALL</a>
           </div>
@@ -101,75 +99,55 @@ function App() {
       )} */}
           <form onSubmit={handleSubmit}>
             <div className="fieldset">
-              <h1>Requests and Questions</h1>
-              <div className="row">
-                <div className="col-25">
-                  <label>
-                    <p>Name</p>
-                  </label>
-                </div>
-                <div className="col-75">
-                  <input
-                    name="name"
-                    onChange={handleChange}
-                    value={formData.name || ""}
-                  />
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-25">
-                  <label>
-                    <p>Number</p>
-                  </label>
-                </div>
-                <div className="col-75">
-                  <input
-                    name="contactNumber"
-                    onChange={handleChange}
-                    value={formData.contactNumber || ""}
-                  />
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-25">
-                  <label>
-                    <p>Email</p>
-                  </label>
-                </div>
-                <div className="col-75">
-                  <input
-                    name="email"
-                    onChange={handleChange}
-                    value={formData.email || ""}
-                  />
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-25">
-                  <label>
-                    <p>Trip Details</p>
-                  </label>
-                </div>
-                <div className="col-75">
-                  <textarea
-                    rows="10"
-                    cols="22"
-                    name="comments"
-                    onChange={handleChange}
-                    value={formData.comments}
-                  />
-                </div>
-              </div>
+              <h2>Request A Taxi</h2>
+              <label>
+                <p>Name</p>
+              </label>
+              <input
+                placeholder="Ex: Ram"
+                name="name"
+                onChange={handleChange}
+                value={formData.name || ""}
+              />
+              <label>
+                <p>Number</p>
+              </label>
+              <input
+                type="tel"
+                placeholder="Ex: +1 (123) 456-7890"
+                name="contactNumber"
+                onChange={handleChange}
+                value={formData.contactNumber || ""}
+              />
+              <label>
+                <p>Pick up location</p>
+              </label>
+              <input
+                placeholder="Address"
+                name="email"
+                onChange={handleChange}
+                value={formData.email || ""}
+              />
+              <label>
+                <p>Destination</p>
+              </label>
+              <input
+                placeholder="Address"
+                name="comments"
+                onChange={handleChange}
+                value={formData.comments}
+              />
             </div>
-            <ReCAPTCHA
+            {/* <ReCAPTCHA
               sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
               onChange={onChange}
-            />
+            /> */}
+
             <button type="submit" disabled={!submitting}>
               <span></span>
               Submit
             </button>
-            {readText && <h5>Submitted! Refresh to submit again</h5>}
+            {readText && <h5>Submitted! Refresh to submit again...</h5>}
           </form>
         </div>
       </div>
